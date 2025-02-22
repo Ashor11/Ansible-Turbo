@@ -1,0 +1,19 @@
+---
+- name: " play1 "
+  hosts: node01
+  become: yes
+  tasks: 
+    - name: "Create an empty file called blog.txt"
+      file:
+        path: /opt/news/blog.txt
+        state: touch
+        group: sam
+- name: " play2 "
+  hosts: node02
+  become: yes
+  tasks:
+    - name: "Create an empty file called story.txt under"
+      file:
+        path: /opt/news/story.txt
+        state: touch
+        owner: sam

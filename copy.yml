@@ -1,0 +1,10 @@
+---
+- name: " play 2"
+  hosts: all
+  become: yes
+  tasks:
+    - name: " copy "
+      copy:
+         src: '/usr/src/blog/index.html'
+         dest: ' /opt/blog/ '
+         remote_src: yes

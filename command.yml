@@ -1,0 +1,9 @@
+---
+- name: "playbook 1"
+  hosts: localhost
+  connection: local
+  become: yes
+  tasks:
+    - name: "display"
+      command: cat /etc/resolv.conf
+       

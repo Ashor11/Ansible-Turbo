@@ -1,0 +1,8 @@
+---
+- name: "instal"
+  hosts: localhost
+  become: yes
+  tasks:
+    yum:
+       name: vim-enhanced
+       state: present

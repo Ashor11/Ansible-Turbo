@@ -1,0 +1,16 @@
+---
+- name: " PLAY 1 "
+  hosts: node01
+  become: yes
+  vars:
+    x: "This file is created by Ansible!"
+  tasks: 
+    - name: " Create a playbook called file.yml " 
+      file:
+        path: /opt/file.txt
+        state: touch
+      notify: " yes "
+
+  handlers:
+    - name: " yes "
+      command: echo {{x}} >> /opt/file.txt
