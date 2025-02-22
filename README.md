@@ -1,4 +1,4 @@
-# 📖 Ansible Course Files Documentation
+# 📖 Ansible Documentation
 
 ## 📌 Configuration File  
 ### `ansible.cfg`  
